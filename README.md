@@ -22,7 +22,7 @@ func main() {
     if err := jsonenv.Extract("example-secret"); err != nil {
         log.Fatalln(err)
     }
-    // do something with extracted envrironments.
+    // do something with extracted environment variables.
     fmt.Println(os.Getenv("FOO")) // outputs BAR
 }
 ```
