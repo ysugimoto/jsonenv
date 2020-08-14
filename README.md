@@ -8,7 +8,7 @@ AWS ECS using Secret Manager. On running ECS task with `secrets`, the runtime as
 
 ## Usage
 
-```
+```go
 import (
     "fmt"
     "log"
