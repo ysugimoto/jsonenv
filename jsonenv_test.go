@@ -9,6 +9,10 @@ import (
 )
 
 func TestJsonEnv(t *testing.T) {
+	t.Run("Should return error if env key name is empty", func(t *testing.T) {
+		assert.Error(t, jsonenv.Extract(""))
+	})
+
 	t.Run("Should return error if env key does not exist", func(t *testing.T) {
 		os.Setenv("jsonenv-test01", `{"EXAMPLE":"VALUE"}`)
 		defer func() {

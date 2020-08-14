@@ -10,6 +10,10 @@ import (
 
 // jsonenv.Extract gets environment name and parse JSON, and set to environment key-value.
 func Extract(envName string) error {
+	if envName == "" {
+		return errors.New("Environment key name is empty")
+	}
+
 	env := os.Getenv(envName)
 	if env == "" {
 		return errors.New("Environment value is empty for: " + envName)
