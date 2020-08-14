@@ -27,6 +27,12 @@ func main() {
 }
 ```
 
+## Test
+
+```shell
+go test
+```
+
 ## License
 
 MIT
